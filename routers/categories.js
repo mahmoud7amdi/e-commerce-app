@@ -9,7 +9,7 @@ router.post(`/Category`, async(req,res)=>{
     try{
         await category.save()
         res.send(category)
-    }catch (e) {
+    }catch (e){
         res.status(400).send(e)
     }
 

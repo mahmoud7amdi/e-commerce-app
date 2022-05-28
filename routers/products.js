@@ -6,7 +6,7 @@ const Product = require('../models/product')
 
 
 
-router.post(`/Product`, async(req,res)=>{
+router.post(`/api/Product`, async(req,res)=>{
     const category = await Category.findById(req.body.category)
     if(!category) return res.status(400).send('invalid category')
     const product = new Product(req.body)
